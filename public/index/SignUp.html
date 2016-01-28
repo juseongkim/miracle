@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.1/angular.min.js"></script>
+
+    <style>
+    input.ng-invalid
+    {
+        background-color:pink;
+    }
+
+    input.ng-valid
+    {
+        background-color:lightgreen;
+    }
+
+    p
+    {
+       border:0px;
+       padding:0px;
+       margin:-2px;
+    }
+    </style>
+</head>
+   
+<body style="background-color:black;" ng-app='signUp'>
+ <div data-role = "page" data-theme="a">
+      
+      <div data-role = "header">   
+         <a href ="../SignIn.html" rel="external" data-icon = "home">Back</a>
+         <h1>Sign Up</h1>
+       </div>
+               
+<div data-role = "content">
+   <div style="text-align: center;"><img src="../img/logo.png" style=" height:60px"></div>
+   <div style="text-align: center;">
+   <p style=" padding:0; margin:0 ; font-size:30px;">StudySupporter</p>
+   </div>
+         <div id="section">
+         <form name="signUp">
+            <p>email : </p>
+             <input type="email" id="email" name="email" ng-model="email" required placeholder= " ������ ������ �Է��ϼ���.">
+               <span style="color:red" ng-show="signUp.email.$error.email">abc</span>
+               <span style="color:red" ng-show="signUp.email.$error.required">eee</span>
+             <p>password : </p>
+             <input type="text" name="pwd" id="pwd" value="" placeholder = "��й�ȣ�� �Է��ϼ���" ng-model="pwd" required>
+                  <span style="color:red" ng-show="signUp.pwd.$error.required">�ʼ��Է� �׸��Դϴ�.</span>
+             <p>name : </p>
+             <input type="text" name="name" id="name" placeholder= " �̸��� �Է��ϼ���." ng-model="name" required>
+                <span style="color:red" ng-show="signUp.name.$error.required">�ʼ��Է� �׸��Դϴ�.</span>
+             <p>phonenumber : </p>
+             <input type="number" name="phoneNumber" id="phoneNumber" placeholder= " �ڵ��� ��ȣ�� �Է��ϼ���." ng-model="phoneNumber" required>
+                <span style="color:red" ng-show="signUp.phoneNumber.$error.required">�ʼ��Է� �׸��Դϴ�.</span>
+             <p>birth : </p>
+             <input type="date" name="birth" id="birth" placeholder= " ��������� �Է��ϼ���." ng-model="birth" required>
+                <span style="color:red" ng-show="signUp.birth.$error.required">�ʼ��Է� �׸��Դϴ�.</span>
+         </form>
+
+
+<form>
+    <label>
+        <input type="radio" name="radio-choice-0" id="radio-choice-0a" checked>����
+    </label>
+    <label for="radio-choice-0b">����</label>
+    <input type="radio" name="radio-choice-0" id="radio-choice-0b" class="custom">
+</form>
+
+
+               <div>
+                 <div class="ui-grid-a">
+               <div class="ui-block-a">
+                  <a href = "#" id="makeidbtn" data-role = "button" data-theme="none" style=" color:white; background-color:#FF4848; text-decoration:none;" id ="login">�����ϱ�</a>
+               </div>
+               <div class="ui-block-b">
+                  <a href = "#login" data-role = "button" id ="cancel">����ϱ�</a>
+               </div>
+              </div>
+            </div>   
+            </div>        
+    </div>
+ </div>
+ 
+
+</body>
+</html>

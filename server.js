@@ -4,7 +4,7 @@ var express = require('express'),
 	db = mongojs('contactlist', ['contactlist']),
 	bodyParser = require('body-parser');
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/public/SignIn.html"));
 app.use(bodyParser.json());
 
 app.get('/contactlist', function(req, res){
